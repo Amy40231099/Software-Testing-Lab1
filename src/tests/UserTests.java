@@ -10,7 +10,10 @@ public class UserTests {
 		User testUser = new User("mike", "my_passwd", "Mike", "Smith", "0771234567");
 
 		System.out.println(testUser);
-		*/
+	}
+}
+*/
+		
 	
 	//Automated Testing
 	
@@ -41,6 +44,8 @@ public class UserTests {
 		passed = false;
 	}
 	
+	
+	
 	//Test- first name
 	if(testUser.getFirst_name() != test_first_name) {
 		System.out.println("TC3 failed: first name did not match");
@@ -61,9 +66,31 @@ public class UserTests {
 	
 	if(passed)
 		System.out.println("All TC's passed.");
-}
+
+	// Asserts
+	
+	// Failing assert test
+	//assert 1==2;
+	
+	//Assert - username
+	assert testUser.getUsername() == test_username;
+	
+
+	//Assert - password
+	assert testUser.getPassword() == test_password;
+	
+	//Assert - first name
+	assert testUser.getFirst_name() == test_first_name;
+	
+	//Assert - last name 
+	assert testUser.getLast_name() == test_last_name;
+	
+	//Assert - mobile number
+	assert testUser.getMobile_number() == test_mobile_number;
+	
+	System.out.println("All Java assertions in the test suite have passed. (None Failed). ");
+	
 	}
-
-// test
-
+}
+	
 
