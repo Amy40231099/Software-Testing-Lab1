@@ -108,12 +108,18 @@ public class SimpleBankingApp {
 		// Withdraw: adding a transaction with a negative value
 		//System.out.println("Before transaction: -50.21");
 		addTransaction("5495-1234", -50.21);
+		addTransaction("5495-1239", 100.00);
+		addTransaction("5495-1291", 100.00);
+		addTransaction("5495-6789", 100.00);
 		//System.out.println("After transaction: -50.21");
 		printAllAccounts();
 		
 		// and some more activities on the accounts
 		//System.out.println("Before transactions: 520.00 and 21.00");
 		addTransaction("5495-1234", 520.00);
+		addTransaction("5495-1239", -50.00);
+		addTransaction("5495-1291", -25.00);
+		addTransaction("5495-6789", -75.00);
 		addTransaction("9999-1111", 21.00); // it seems this account does not exist in the loaded (populated) data, 
 											// but the addTransaction does not do that check, need to improve that function in future
 		// let's print the accounts and their balance to see if the above transaction have impacted their balances
